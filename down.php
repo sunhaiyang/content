@@ -81,6 +81,7 @@ class down {
 	}
 	
 	public function download() {
+		
 		$a_k = trim($_GET['a_k']);
 		$pc_auth_key = md5(pc_base::load_config('system','auth_key').$_SERVER['HTTP_USER_AGENT']);
 		$a_k = sys_auth($a_k, 'DECODE', $pc_auth_key);
